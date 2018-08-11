@@ -92,7 +92,7 @@ const guiState = {
     nmsRadius: 20.0,
   },
   output: {
-    showVideo: true,
+    showVideo: false,
     showSkeleton: true,
     showPoints: true,
   },
