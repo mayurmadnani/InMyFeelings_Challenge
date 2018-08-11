@@ -3,33 +3,40 @@
 
 <head>
     <title>In My Feelings Challenge/</title>
-    
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css"
+    />
+
     <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: black;
-    }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+        }
 
-    .footer-text {
-        max-width: 600px;
-        text-align: center;
-        margin: auto;
-    }
+        .footer-text {
+            max-width: 600px;
+            text-align: center;
+            margin: auto;
+        }
 
-    @media only screen and (max-width: 600px) {
-      .footer-text, .dg {
-        display: none;
-      }
-    }
+        @media only screen and (max-width: 600px) {
+            .footer-text,
+            .dg {
+                display: none;
+            }
+        }
 
-    canvas {
+        canvas {
             background-color: black;
-    }
-    
+            margin: auto;
+        }
+
+        .dg.a {
+            margin: auto !important;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -38,13 +45,10 @@
     <div id="loading">
         Loading the model...
     </div>
-    <a
-    class="github-fork-ribbon"
-    href="https://github.com/mayurmadnani/InMyFeelings_Challenge"
-    data-ribbon="Fork me on GitHub"
-    title="Fork me on GitHub">
-    Fork me on GitHub
-  </a>
+    <a class="github-fork-ribbon" href="https://github.com/mayurmadnani/InMyFeelings_Challenge" data-ribbon="Fork me on GitHub"
+        title="Fork me on GitHub">
+        Fork me on GitHub
+    </a>
     <div id='main' style='display:none'>
         <video id="video" playsinline style=" -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
@@ -58,20 +62,30 @@
     <div class="footer">
         <div class="footer-text">
             <p>
-                PoseNet runs with either a <strong>single-pose</strong> or <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
+                PoseNet runs with either a
+                <strong>single-pose</strong> or
+                <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but
+                requires only one subject present in the image.
                 <br>
-                <br> The <strong>output stride</strong> and <strong>image scale factor</strong> have the largest effects on accuracy/speed. A <i>higher</i> output stride results in lower accuracy but higher speed. A <i>higher</i> image scale factor results in higher accuracy but lower speed.
+                <br> The
+                <strong>output stride</strong> and
+                <strong>image scale factor</strong> have the largest effects on accuracy/speed. A
+                <i>higher</i> output stride results in lower accuracy but higher speed. A
+                <i>higher</i> image scale factor results in higher accuracy but lower speed.
                 <br>
-                <br> This is a Pure Javascript implementation of: <a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet" target="_blank" rel="noopener">PoseNet</a>.
+                <br> This is a Pure Javascript implementation of:
+                <a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet"
+                    target="_blank" rel="noopener">PoseNet</a>.
                 <br>
-                <br> Thank you <a href="https://js.tensorflow.org" target="_blank" rel="noopener">TensorFlow.js</a> for your flexible and intuitive APIs.
+                <br> Thank you
+                <a href="https://js.tensorflow.org" target="_blank" rel="noopener">TensorFlow.js</a> for your flexible and intuitive APIs.
             </p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.2/build/dat.gui.js"></script>
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
-    
+
     <script src="demo_util.js"></script>
     <script src="stats.min.js "></script>
     <script src="camera.js"></script>
